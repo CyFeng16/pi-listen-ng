@@ -51,7 +51,11 @@ export function maybeShowTtsOnboarding(opts: OnboardTtsOpts): boolean {
 
 	const recommendation = recommendDefaultModel(device.systemLocale ?? "en");
 	let recModel;
-	try { recModel = getTtsModel(recommendation.modelId); } catch { recModel = undefined; }
+	try {
+		recModel = getTtsModel(recommendation.modelId);
+	} catch {
+		recModel = undefined;
+	}
 	const installed = isTtsModelInstalled(recommendation.modelId);
 
 	const lines = [

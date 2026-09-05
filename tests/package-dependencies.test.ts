@@ -100,4 +100,17 @@ describe("Pi dependency support", () => {
 			expect(lock).toContain(`"${packageName}": ["${packageName}@${PI_VERSION}"`);
 		}
 	});
+
+	test("lockfiles root name matches package.json name", () => {
+		const name = readJson("package.json").name as string;
+		expect(name).toBeTruthy();
+
+		const npmLock = readJson("package-lock.json");
+		expect(npmLock.name).toBe(name);
+		expect(npmLock.packages?.[""]?.name).toBe(name);
+
+		// bun.lock stores the workspace root under workspaces[""].name
+		const bunLock = readFileSync("bun.lock", "utf8");
+		expect(bunLock).toMatch(new RegExp(`"workspaces": \\{\\s*"": \\{\\s*"name": "${name}"`));
+	});
 });

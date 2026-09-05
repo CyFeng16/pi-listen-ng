@@ -1,5 +1,5 @@
 {
-  "name": "@codexstar/pi-listen",
+  "name": "pi-listen-ng",
   "version": "7.2.2",
   "description": "Voice in + voice out for Pi CLI — hold-to-talk STT (Deepgram or 19 offline models) plus TTS (Kitten Nano, Piper, Kokoro, or Deepgram Aura)",
   "type": "module",
@@ -34,13 +34,13 @@
     "url": "https://x.com/baanditeagle"
   },
   "license": "MIT",
-  "homepage": "https://github.com/codexstar69/pi-listen#readme",
+  "homepage": "https://github.com/CyFeng16/pi-listen-ng#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codexstar69/pi-listen.git"
+    "url": "https://github.com/CyFeng16/pi-listen-ng.git"
   },
   "bugs": {
-    "url": "https://github.com/codexstar69/pi-listen/issues"
+    "url": "https://github.com/CyFeng16/pi-listen-ng/issues"
   },
   "scripts": {
     "typecheck": "bunx tsc -p tsconfig.json",

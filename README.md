@@ -52,14 +52,14 @@ pi install npm:pi-listen-ng
 
 pi-listen supports two transcription backends:
 
-| | Deepgram (cloud) | Local models (offline) |
-|---|---|---|
-| **How it works** | Live streaming — text appears as you speak | Batch mode — transcribes after you finish recording |
-| **Setup** | API key required | No API key, models auto-download on first use |
-| **Internet** | Required | Not required after model download |
-| **Latency** | Real-time interim results | 2–10 seconds after recording stops |
-| **Languages** | 56+ with live streaming | Depends on model (1–57 languages) |
-| **Cost** | $200 free credit (lasts 6–12 months for most developers) | Free forever |
+|                  | Deepgram (cloud)                                         | Local models (offline)                              |
+| ---------------- | -------------------------------------------------------- | --------------------------------------------------- |
+| **How it works** | Live streaming — text appears as you speak               | Batch mode — transcribes after you finish recording |
+| **Setup**        | API key required                                         | No API key, models auto-download on first use       |
+| **Internet**     | Required                                                 | Not required after model download                   |
+| **Latency**      | Real-time interim results                                | 2–10 seconds after recording stops                  |
+| **Languages**    | 56+ with live streaming                                  | Depends on model (1–57 languages)                   |
+| **Cost**         | $200 free credit (lasts 6–12 months for most developers) | Free forever                                        |
 
 Run `/voice-settings` inside Pi to choose your backend and configure everything from one panel.
 
@@ -80,6 +80,7 @@ No setup needed — run `/voice-settings`, switch backend to Local, and select a
 ### 3. Open Pi
 
 On first launch, pi-listen checks your setup and tells you what's ready:
+
 - Backend configured (Deepgram key or local model)
 - Audio capture tool detected (sox, ffmpeg, or arecord)
 - If everything checks out, voice activates immediately
@@ -88,11 +89,11 @@ On first launch, pi-listen checks your setup and tells you what's ready:
 
 pi-listen auto-detects your audio tool. No manual install needed if you already have sox or ffmpeg.
 
-| Priority | Tool | Platforms | Install |
-|----------|------|-----------|---------|
-| 1 | **SoX** (`rec`) | macOS, Linux, Windows | `brew install sox` / `apt install sox` / `choco install sox` |
-| 2 | **ffmpeg** | macOS, Linux, Windows | `brew install ffmpeg` / `apt install ffmpeg` |
-| 3 | **arecord** | Linux only | Pre-installed (ALSA) |
+| Priority | Tool            | Platforms             | Install                                                      |
+| -------- | --------------- | --------------------- | ------------------------------------------------------------ |
+| 1        | **SoX** (`rec`) | macOS, Linux, Windows | `brew install sox` / `apt install sox` / `choco install sox` |
+| 2        | **ffmpeg**      | macOS, Linux, Windows | `brew install ffmpeg` / `apt install ffmpeg`                 |
+| 3        | **arecord**     | Linux only            | Pre-installed (ALSA)                                         |
 
 ---
 
@@ -130,11 +131,11 @@ See your hardware profile (RAM, CPU, GPU), dependency status (sherpa-onnx runtim
 
 ### Keybindings
 
-| Action | Key | Notes |
-|--------|-----|-------|
+| Action               | Key                  | Notes                                                                   |
+| -------------------- | -------------------- | ----------------------------------------------------------------------- |
 | **Record to editor** | Hold `SPACE` (≥1.2s) | Release to finalize. Pre-records during warmup so you don't miss words. |
-| **Toggle recording** | `Ctrl+Shift+V` | Works in all terminals — press to start, press again to stop. |
-| **Clear editor** | `Escape` × 2 | Double-tap within 500ms to clear all text. |
+| **Toggle recording** | `Ctrl+Shift+V`       | Works in all terminals — press to start, press again to stop.           |
+| **Clear editor**     | `Escape` × 2         | Double-tap within 500ms to clear all text.                              |
 
 ### How recording works
 
@@ -145,44 +146,44 @@ See your hardware profile (RAM, CPU, GPU), dependency status (sherpa-onnx runtim
 
 ### Commands
 
-| Command | Description |
-|---------|-------------|
-| `/voice-settings` | Settings panel — backend, models, language, scope, device |
-| `/voice-models` | Settings panel (Models tab) |
-| `/voice-speak <text>` | Speak text out loud (TTS) |
-| `/voice-speak-test` | Speak a sample sentence |
-| `/voice-speak-toggle` | Enable / disable TTS |
-| `/voice-autosubmit` `[on|off]` | Toggle: STT text auto-sent to the agent |
-| `/voice-speak-models` | Browse / install TTS voice models |
-| `/voice-speak-info` | Diagnose TTS state |
-| `/voice-help` | Keyboard + command reference (or press `F1`) |
-| `/voice test` | Full diagnostics — audio tool, mic, API key |
-| `/voice on` / `off` | Enable or disable voice |
-| `/voice dictate` | Continuous dictation (no key hold) |
-| `/voice stop` | Stop active recording or dictation |
-| `/voice history` | Recent transcriptions |
-| `/voice` | Toggle on/off |
+| Command                  | Description                                               |
+| ------------------------ | --------------------------------------------------------- |
+| `/voice-settings`        | Settings panel — backend, models, language, scope, device |
+| `/voice-models`          | Settings panel (Models tab)                               |
+| `/voice-speak <text>`    | Speak text out loud (TTS)                                 |
+| `/voice-speak-test`      | Speak a sample sentence                                   |
+| `/voice-speak-toggle`    | Enable / disable TTS                                      |
+| `/voice-autosubmit` `[on | off]`                                                     | Toggle: STT text auto-sent to the agent |
+| `/voice-speak-models`    | Browse / install TTS voice models                         |
+| `/voice-speak-info`      | Diagnose TTS state                                        |
+| `/voice-help`            | Keyboard + command reference (or press `F1`)              |
+| `/voice test`            | Full diagnostics — audio tool, mic, API key               |
+| `/voice on` / `off`      | Enable or disable voice                                   |
+| `/voice dictate`         | Continuous dictation (no key hold)                        |
+| `/voice stop`            | Stop active recording or dictation                        |
+| `/voice history`         | Recent transcriptions                                     |
+| `/voice`                 | Toggle on/off                                             |
 
 ### v7.1 keyboard
 
 While in the settings panel:
 
-| Key | Action |
-|-----|--------|
-| `← →` | switch tab |
-| `↑ ↓` | navigate row (skips group headings) |
-| `↵` | select / activate |
-| `esc` | back to main / close panel |
-| `type` | filter (search) |
-| `bksp` | clear last search char |
+| Key    | Action                              |
+| ------ | ----------------------------------- |
+| `← →`  | switch tab                          |
+| `↑ ↓`  | navigate row (skips group headings) |
+| `↵`    | select / activate                   |
+| `esc`  | back to main / close panel          |
+| `type` | filter (search)                     |
+| `bksp` | clear last search char              |
 
 While an install widget or playback indicator is mounted (no overlay
 in front):
 
-| Key | Action |
-|-----|--------|
+| Key   | Action                                                        |
+| ----- | ------------------------------------------------------------- |
 | `esc` | cancel active install (most-recent first), then stop playback |
-| `F1` | open help overlay (always available) |
+| `F1`  | open help overlay (always available)                          |
 
 ---
 
@@ -192,27 +193,27 @@ in front):
 
 ### Top picks
 
-| Model | Accuracy | Speed | Size | Languages | Notes |
-|-------|----------|-------|------|-----------|-------|
-| **Parakeet TDT v3** | ●●●●○ | ●●●●○ | 671 MB | 25 (auto-detect) | Best overall. WER 6.3%. |
-| **Parakeet TDT v2** | ●●●●● | ●●●●○ | 661 MB | English | Best English. WER 6.0%. |
-| **Whisper Turbo** | ●●●●○ | ●●○○○ | 1.0 GB | 57 | Broadest language support. |
+| Model               | Accuracy | Speed | Size   | Languages        | Notes                      |
+| ------------------- | -------- | ----- | ------ | ---------------- | -------------------------- |
+| **Parakeet TDT v3** | ●●●●○    | ●●●●○ | 671 MB | 25 (auto-detect) | Best overall. WER 6.3%.    |
+| **Parakeet TDT v2** | ●●●●●    | ●●●●○ | 661 MB | English          | Best English. WER 6.0%.    |
+| **Whisper Turbo**   | ●●●●○    | ●●○○○ | 1.0 GB | 57               | Broadest language support. |
 
 ### Fast and lightweight
 
-| Model | Accuracy | Speed | Size | Languages | Notes |
-|-------|----------|-------|------|-----------|-------|
-| **Moonshine v2 Tiny** | ●●○○○ | ●●●●● | 43 MB | English | 34ms latency. Raspberry Pi friendly. |
-| **Moonshine Base** | ●●●○○ | ●●●●● | 287 MB | English | Handles accents well. |
-| **SenseVoice Small** | ●●●○○ | ●●●●● | 228 MB | zh/en/ja/ko/yue | Best for CJK languages. |
+| Model                 | Accuracy | Speed | Size   | Languages       | Notes                                |
+| --------------------- | -------- | ----- | ------ | --------------- | ------------------------------------ |
+| **Moonshine v2 Tiny** | ●●○○○    | ●●●●● | 43 MB  | English         | 34ms latency. Raspberry Pi friendly. |
+| **Moonshine Base**    | ●●●○○    | ●●●●● | 287 MB | English         | Handles accents well.                |
+| **SenseVoice Small**  | ●●●○○    | ●●●●● | 228 MB | zh/en/ja/ko/yue | Best for CJK languages.              |
 
 ### Specialist
 
-| Model | Accuracy | Speed | Size | Languages | Notes |
-|-------|----------|-------|------|-----------|-------|
-| **GigaAM v3** | ●●●●○ | ●●●●○ | 225 MB | Russian | 50% lower WER than Whisper on Russian. |
-| **Whisper Medium** | ●●●●○ | ●●●○○ | 946 MB | 57 | Good accuracy, medium speed. |
-| **Whisper Large v3** | ●●●●○ | ●○○○○ | 1.8 GB | 57 | Highest Whisper accuracy. Slow on CPU. |
+| Model                | Accuracy | Speed | Size   | Languages | Notes                                  |
+| -------------------- | -------- | ----- | ------ | --------- | -------------------------------------- |
+| **GigaAM v3**        | ●●●●○    | ●●●●○ | 225 MB | Russian   | 50% lower WER than Whisper on Russian. |
+| **Whisper Medium**   | ●●●●○    | ●●●○○ | 946 MB | 57        | Good accuracy, medium speed.           |
+| **Whisper Large v3** | ●●●●○    | ●○○○○ | 1.8 GB | 57        | Highest Whisper accuracy. Slow on CPU. |
 
 Plus 8 language-specialized Moonshine v2 variants for Japanese, Korean, Arabic, Chinese, Ukrainian, Vietnamese, and Spanish.
 
@@ -236,23 +237,23 @@ Models from [Handy](https://github.com/cjpais/handy) (`~/Library/Application Sup
 
 ## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Dual backend** | Deepgram (cloud, live streaming) or local models (offline, batch) — switch in settings |
-| **19 local models** | Parakeet, Whisper, Moonshine, SenseVoice, GigaAM — with accuracy/speed ratings |
-| **Unified settings panel** | One overlay panel for all configuration — `/voice-settings` |
-| **Device-aware recommendations** | Scores models against your hardware. Only best-in-class models get [recommended]. |
+| Feature                          | Description                                                                              |
+| -------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Dual backend**                 | Deepgram (cloud, live streaming) or local models (offline, batch) — switch in settings   |
+| **19 local models**              | Parakeet, Whisper, Moonshine, SenseVoice, GigaAM — with accuracy/speed ratings           |
+| **Unified settings panel**       | One overlay panel for all configuration — `/voice-settings`                              |
+| **Device-aware recommendations** | Scores models against your hardware. Only best-in-class models get [recommended].        |
 | **Enterprise download pipeline** | Pre-checks (disk, network, permissions), live progress with speed/ETA, post-verification |
-| **Handy integration** | Auto-detects models from Handy app, imports via symlink |
-| **Audio fallback chain** | Tries sox, ffmpeg, arecord in order |
-| **Pre-recording** | Audio capture starts during warmup — you never miss the first word |
-| **Tail recording** | Keeps recording 1.5s after release so your last word isn't clipped |
-| **Live streaming** | Deepgram Nova 3 WebSocket — interim transcripts as you speak |
-| **56+ languages** | Deepgram: 56+ with live streaming. Local: up to 57 depending on model. |
-| **Continuous dictation** | `/voice dictate` for long-form input without holding keys |
-| **Typing cooldown** | Space holds within 400ms of typing are ignored |
-| **Sound feedback** | macOS system sounds for start, stop, and error events |
-| **Cross-platform** | macOS, Windows, Linux — Kitty protocol + non-Kitty fallback |
+| **Handy integration**            | Auto-detects models from Handy app, imports via symlink                                  |
+| **Audio fallback chain**         | Tries sox, ffmpeg, arecord in order                                                      |
+| **Pre-recording**                | Audio capture starts during warmup — you never miss the first word                       |
+| **Tail recording**               | Keeps recording 1.5s after release so your last word isn't clipped                       |
+| **Live streaming**               | Deepgram Nova 3 WebSocket — interim transcripts as you speak                             |
+| **56+ languages**                | Deepgram: 56+ with live streaming. Local: up to 57 depending on model.                   |
+| **Continuous dictation**         | `/voice dictate` for long-form input without holding keys                                |
+| **Typing cooldown**              | Space holds within 400ms of typing are ignored                                           |
+| **Sound feedback**               | macOS system sounds for start, stop, and error events                                    |
+| **Cross-platform**               | macOS, Windows, Linux — Kitty protocol + non-Kitty fallback                              |
 
 ---
 
@@ -276,22 +277,22 @@ extensions/voice/settings-panel.ts  Settings panel — Component interface, over
 
 Settings stored in Pi's settings files under the `voice` key:
 
-| Scope | Path |
-|-------|------|
-| Global | `~/.pi/agent/settings.json` |
+| Scope   | Path                          |
+| ------- | ----------------------------- |
+| Global  | `~/.pi/agent/settings.json`   |
 | Project | `<project>/.pi/settings.json` |
 
 ```json
 {
-  "voice": {
-    "version": 2,
-    "enabled": true,
-    "language": "en",
-    "backend": "local",
-    "localModel": "parakeet-v3",
-    "scope": "global",
-    "onboarding": { "completed": true, "schemaVersion": 2 }
-  }
+	"voice": {
+		"version": 2,
+		"enabled": true,
+		"language": "en",
+		"backend": "local",
+		"localModel": "parakeet-v3",
+		"scope": "global",
+		"onboarding": { "completed": true, "schemaVersion": 2 }
+	}
 }
 ```
 
@@ -305,13 +306,13 @@ an explicit save and it still goes to `~/.env.secrets` or `~/.zshrc`.
 
 Run `/voice test` inside Pi for full diagnostics.
 
-| Problem | Solution |
-|---------|----------|
-| "DEEPGRAM_API_KEY not set" | [Get a key](https://dpgr.am/pi-voice) → `export DEEPGRAM_API_KEY="..."` in `~/.zshrc` |
-| "No audio capture tool found" | `brew install sox` or `brew install ffmpeg` |
-| Space doesn't activate voice | Run `/voice-settings` — voice may be disabled |
-| Local model not transcribing | Check `/voice-settings` → Device tab for sherpa-onnx status |
-| Download failed | Partial downloads auto-resume on retry. Check disk space in Device tab. |
+| Problem                                          | Solution                                                                                                        |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| "DEEPGRAM_API_KEY not set"                       | [Get a key](https://dpgr.am/pi-voice) → `export DEEPGRAM_API_KEY="..."` in `~/.zshrc`                           |
+| "No audio capture tool found"                    | `brew install sox` or `brew install ffmpeg`                                                                     |
+| Space doesn't activate voice                     | Run `/voice-settings` — voice may be disabled                                                                   |
+| Local model not transcribing                     | Check `/voice-settings` → Device tab for sherpa-onnx status                                                     |
+| Download failed                                  | Partial downloads auto-resume on retry. Check disk space in Device tab.                                         |
 | `dyld: Library not loaded: libsimdjson` on macOS | Homebrew Node ABI mismatch — run `brew reinstall node` or switch to version-managed Node (`mise`, `fnm`, `nvm`) |
 
 ---

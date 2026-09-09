@@ -35,14 +35,14 @@ pi install npm:pi-listen-ng
 
 pi-listen prend en charge deux backends de transcription :
 
-| | Deepgram (cloud) | Modèles locaux (hors ligne) |
-|---|---|---|
-| **Fonctionnement** | Streaming en direct — le texte apparaît pendant que vous parlez | Mode par lots — transcrit après la fin de l'enregistrement |
-| **Configuration** | Clé API requise | Pas de clé API, les modèles se téléchargent automatiquement à la première utilisation |
-| **Internet** | Requis | Non requis après le téléchargement du modèle |
-| **Latence** | Résultats intermédiaires en temps réel | 2 à 10 secondes après l'arrêt de l'enregistrement |
-| **Langues** | 56+ en streaming en direct | Selon le modèle (1 à 57 langues) |
-| **Coût** | 200 $ de crédit gratuit (dure 6 à 12 mois pour la plupart des développeurs) | Gratuit pour toujours |
+|                    | Deepgram (cloud)                                                            | Modèles locaux (hors ligne)                                                           |
+| ------------------ | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **Fonctionnement** | Streaming en direct — le texte apparaît pendant que vous parlez             | Mode par lots — transcrit après la fin de l'enregistrement                            |
+| **Configuration**  | Clé API requise                                                             | Pas de clé API, les modèles se téléchargent automatiquement à la première utilisation |
+| **Internet**       | Requis                                                                      | Non requis après le téléchargement du modèle                                          |
+| **Latence**        | Résultats intermédiaires en temps réel                                      | 2 à 10 secondes après l'arrêt de l'enregistrement                                     |
+| **Langues**        | 56+ en streaming en direct                                                  | Selon le modèle (1 à 57 langues)                                                      |
+| **Coût**           | 200 $ de crédit gratuit (dure 6 à 12 mois pour la plupart des développeurs) | Gratuit pour toujours                                                                 |
 
 Exécutez `/voice-settings` dans Pi pour choisir votre backend et tout configurer depuis un seul panneau.
 
@@ -63,6 +63,7 @@ Aucune configuration nécessaire — exécutez `/voice-settings`, passez le back
 ### 3. Ouvrir Pi
 
 Au premier lancement, pi-listen vérifie votre configuration et vous indique ce qui est prêt :
+
 - Backend configuré (clé Deepgram ou modèle local)
 - Outil de capture audio détecté (sox, ffmpeg ou arecord)
 - Si tout est en ordre, la voix s'active immédiatement
@@ -71,11 +72,11 @@ Au premier lancement, pi-listen vérifie votre configuration et vous indique ce 
 
 pi-listen détecte automatiquement votre outil audio. Aucune installation manuelle nécessaire si vous avez déjà sox ou ffmpeg.
 
-| Priorité | Outil | Plateformes | Installation |
-|----------|-------|-------------|-------------|
-| 1 | **SoX** (`rec`) | macOS, Linux, Windows | `brew install sox` / `apt install sox` / `choco install sox` |
-| 2 | **ffmpeg** | macOS, Linux, Windows | `brew install ffmpeg` / `apt install ffmpeg` |
-| 3 | **arecord** | Linux uniquement | Préinstallé (ALSA) |
+| Priorité | Outil           | Plateformes           | Installation                                                 |
+| -------- | --------------- | --------------------- | ------------------------------------------------------------ |
+| 1        | **SoX** (`rec`) | macOS, Linux, Windows | `brew install sox` / `apt install sox` / `choco install sox` |
+| 2        | **ffmpeg**      | macOS, Linux, Windows | `brew install ffmpeg` / `apt install ffmpeg`                 |
+| 3        | **arecord**     | Linux uniquement      | Préinstallé (ALSA)                                           |
 
 ---
 
@@ -113,11 +114,11 @@ Consultez votre profil matériel (RAM, CPU, GPU), l'état des dépendances (runt
 
 ### Raccourcis clavier
 
-| Action | Touche | Notes |
-|--------|--------|-------|
-| **Enregistrer vers l'éditeur** | Maintenir `SPACE` (≥1,2s) | Relâcher pour finaliser. Pré-enregistre pendant le préchauffage pour ne manquer aucun mot. |
-| **Basculer l'enregistrement** | `Ctrl+Shift+V` | Fonctionne dans tous les terminaux — appuyer pour démarrer, appuyer à nouveau pour arrêter. |
-| **Effacer l'éditeur** | `Escape` × 2 | Double appui en 500ms pour effacer tout le texte. |
+| Action                         | Touche                    | Notes                                                                                       |
+| ------------------------------ | ------------------------- | ------------------------------------------------------------------------------------------- |
+| **Enregistrer vers l'éditeur** | Maintenir `SPACE` (≥1,2s) | Relâcher pour finaliser. Pré-enregistre pendant le préchauffage pour ne manquer aucun mot.  |
+| **Basculer l'enregistrement**  | `Ctrl+Shift+V`            | Fonctionne dans tous les terminaux — appuyer pour démarrer, appuyer à nouveau pour arrêter. |
+| **Effacer l'éditeur**          | `Escape` × 2              | Double appui en 500ms pour effacer tout le texte.                                           |
 
 ### Comment fonctionne l'enregistrement
 
@@ -128,16 +129,16 @@ Consultez votre profil matériel (RAM, CPU, GPU), l'état des dépendances (runt
 
 ### Commandes
 
-| Commande | Description |
-|----------|-------------|
-| `/voice-settings` | Panneau de configuration — backend, modèles, langue, portée, appareil |
-| `/voice-models` | Panneau de configuration (onglet Modèles) |
-| `/voice test` | Diagnostic complet — outil audio, micro, clé API |
-| `/voice on` / `off` | Activer ou désactiver la voix |
-| `/voice dictate` | Dictée continue (sans maintenir de touche) |
-| `/voice stop` | Arrêter l'enregistrement actif ou la dictée |
-| `/voice history` | Transcriptions récentes |
-| `/voice` | Basculer on/off |
+| Commande            | Description                                                           |
+| ------------------- | --------------------------------------------------------------------- |
+| `/voice-settings`   | Panneau de configuration — backend, modèles, langue, portée, appareil |
+| `/voice-models`     | Panneau de configuration (onglet Modèles)                             |
+| `/voice test`       | Diagnostic complet — outil audio, micro, clé API                      |
+| `/voice on` / `off` | Activer ou désactiver la voix                                         |
+| `/voice dictate`    | Dictée continue (sans maintenir de touche)                            |
+| `/voice stop`       | Arrêter l'enregistrement actif ou la dictée                           |
+| `/voice history`    | Transcriptions récentes                                               |
+| `/voice`            | Basculer on/off                                                       |
 
 ---
 
@@ -147,27 +148,27 @@ Consultez votre profil matériel (RAM, CPU, GPU), l'état des dépendances (runt
 
 ### Meilleurs choix
 
-| Modèle | Précision | Vitesse | Taille | Langues | Notes |
-|--------|-----------|---------|--------|---------|-------|
-| **Parakeet TDT v3** | ●●●●○ | ●●●●○ | 671 Mo | 25 (détection auto) | Meilleur dans l'ensemble. WER 6,3 %. |
-| **Parakeet TDT v2** | ●●●●● | ●●●●○ | 661 Mo | Anglais | Meilleur pour l'anglais. WER 6,0 %. |
-| **Whisper Turbo** | ●●●●○ | ●●○○○ | 1,0 Go | 57 | Support linguistique le plus large. |
+| Modèle              | Précision | Vitesse | Taille | Langues             | Notes                                |
+| ------------------- | --------- | ------- | ------ | ------------------- | ------------------------------------ |
+| **Parakeet TDT v3** | ●●●●○     | ●●●●○   | 671 Mo | 25 (détection auto) | Meilleur dans l'ensemble. WER 6,3 %. |
+| **Parakeet TDT v2** | ●●●●●     | ●●●●○   | 661 Mo | Anglais             | Meilleur pour l'anglais. WER 6,0 %.  |
+| **Whisper Turbo**   | ●●●●○     | ●●○○○   | 1,0 Go | 57                  | Support linguistique le plus large.  |
 
 ### Rapides et légers
 
-| Modèle | Précision | Vitesse | Taille | Langues | Notes |
-|--------|-----------|---------|--------|---------|-------|
-| **Moonshine v2 Tiny** | ●●○○○ | ●●●●● | 43 Mo | Anglais | 34ms de latence. Compatible Raspberry Pi. |
-| **Moonshine Base** | ●●●○○ | ●●●●● | 287 Mo | Anglais | Gère bien les accents. |
-| **SenseVoice Small** | ●●●○○ | ●●●●● | 228 Mo | zh/en/ja/ko/yue | Meilleur pour les langues CJK. |
+| Modèle                | Précision | Vitesse | Taille | Langues         | Notes                                     |
+| --------------------- | --------- | ------- | ------ | --------------- | ----------------------------------------- |
+| **Moonshine v2 Tiny** | ●●○○○     | ●●●●●   | 43 Mo  | Anglais         | 34ms de latence. Compatible Raspberry Pi. |
+| **Moonshine Base**    | ●●●○○     | ●●●●●   | 287 Mo | Anglais         | Gère bien les accents.                    |
+| **SenseVoice Small**  | ●●●○○     | ●●●●●   | 228 Mo | zh/en/ja/ko/yue | Meilleur pour les langues CJK.            |
 
 ### Spécialistes
 
-| Modèle | Précision | Vitesse | Taille | Langues | Notes |
-|--------|-----------|---------|--------|---------|-------|
-| **GigaAM v3** | ●●●●○ | ●●●●○ | 225 Mo | Russe | WER 50 % inférieur à Whisper sur le russe. |
-| **Whisper Medium** | ●●●●○ | ●●●○○ | 946 Mo | 57 | Bonne précision, vitesse moyenne. |
-| **Whisper Large v3** | ●●●●○ | ●○○○○ | 1,8 Go | 57 | Meilleure précision Whisper. Lent sur CPU. |
+| Modèle               | Précision | Vitesse | Taille | Langues | Notes                                      |
+| -------------------- | --------- | ------- | ------ | ------- | ------------------------------------------ |
+| **GigaAM v3**        | ●●●●○     | ●●●●○   | 225 Mo | Russe   | WER 50 % inférieur à Whisper sur le russe. |
+| **Whisper Medium**   | ●●●●○     | ●●●○○   | 946 Mo | 57      | Bonne précision, vitesse moyenne.          |
+| **Whisper Large v3** | ●●●●○     | ●○○○○   | 1,8 Go | 57      | Meilleure précision Whisper. Lent sur CPU. |
 
 Plus 8 variantes Moonshine v2 spécialisées par langue pour le japonais, le coréen, l'arabe, le chinois, l'ukrainien, le vietnamien et l'espagnol.
 
@@ -191,23 +192,23 @@ Les modèles de [Handy](https://github.com/cjpais/handy) (`~/Library/Application
 
 ## Fonctionnalités
 
-| Fonctionnalité | Description |
-|----------------|-------------|
-| **Double backend** | Deepgram (cloud, streaming en direct) ou modèles locaux (hors ligne, par lots) — changement dans les paramètres |
-| **19 modèles locaux** | Parakeet, Whisper, Moonshine, SenseVoice, GigaAM — avec évaluations précision/vitesse |
-| **Panneau de configuration unifié** | Un seul panneau superposé pour toute la configuration — `/voice-settings` |
-| **Recommandations selon l'appareil** | Évalue les modèles par rapport à votre matériel. Seuls les meilleurs de leur catégorie obtiennent [recommended]. |
+| Fonctionnalité                            | Description                                                                                                               |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Double backend**                        | Deepgram (cloud, streaming en direct) ou modèles locaux (hors ligne, par lots) — changement dans les paramètres           |
+| **19 modèles locaux**                     | Parakeet, Whisper, Moonshine, SenseVoice, GigaAM — avec évaluations précision/vitesse                                     |
+| **Panneau de configuration unifié**       | Un seul panneau superposé pour toute la configuration — `/voice-settings`                                                 |
+| **Recommandations selon l'appareil**      | Évalue les modèles par rapport à votre matériel. Seuls les meilleurs de leur catégorie obtiennent [recommended].          |
 | **Pipeline de téléchargement entreprise** | Pré-vérifications (disque, réseau, permissions), progression en direct avec vitesse/ETA, vérification post-téléchargement |
-| **Intégration Handy** | Détecte automatiquement les modèles de l'app Handy, importe par lien symbolique |
-| **Chaîne de repli audio** | Essaie sox, ffmpeg, arecord dans l'ordre |
-| **Pré-enregistrement** | La capture audio démarre pendant le préchauffage — vous ne manquez jamais le premier mot |
-| **Enregistrement de queue** | Continue l'enregistrement 1,5s après le relâchement pour que votre dernier mot ne soit pas coupé |
-| **Streaming en direct** | Deepgram Nova 3 WebSocket — transcriptions intermédiaires pendant que vous parlez |
-| **56+ langues** | Deepgram : 56+ en streaming en direct. Local : jusqu'à 57 selon le modèle. |
-| **Dictée continue** | `/voice dictate` pour la saisie longue sans maintenir de touches |
-| **Délai de frappe** | Les appuis sur espace dans les 400ms suivant une frappe sont ignorés |
-| **Retour sonore** | Sons système macOS pour les événements de démarrage, arrêt et erreur |
-| **Multiplateforme** | macOS, Windows, Linux — protocole Kitty + repli non-Kitty |
+| **Intégration Handy**                     | Détecte automatiquement les modèles de l'app Handy, importe par lien symbolique                                           |
+| **Chaîne de repli audio**                 | Essaie sox, ffmpeg, arecord dans l'ordre                                                                                  |
+| **Pré-enregistrement**                    | La capture audio démarre pendant le préchauffage — vous ne manquez jamais le premier mot                                  |
+| **Enregistrement de queue**               | Continue l'enregistrement 1,5s après le relâchement pour que votre dernier mot ne soit pas coupé                          |
+| **Streaming en direct**                   | Deepgram Nova 3 WebSocket — transcriptions intermédiaires pendant que vous parlez                                         |
+| **56+ langues**                           | Deepgram : 56+ en streaming en direct. Local : jusqu'à 57 selon le modèle.                                                |
+| **Dictée continue**                       | `/voice dictate` pour la saisie longue sans maintenir de touches                                                          |
+| **Délai de frappe**                       | Les appuis sur espace dans les 400ms suivant une frappe sont ignorés                                                      |
+| **Retour sonore**                         | Sons système macOS pour les événements de démarrage, arrêt et erreur                                                      |
+| **Multiplateforme**                       | macOS, Windows, Linux — protocole Kitty + repli non-Kitty                                                                 |
 
 ---
 
@@ -231,22 +232,22 @@ extensions/voice/settings-panel.ts  Panneau de configuration — interface Compo
 
 Les paramètres sont stockés dans les fichiers de configuration de Pi sous la clé `voice` :
 
-| Portée | Chemin |
-|--------|--------|
-| Globale | `~/.pi/agent/settings.json` |
-| Projet | `<project>/.pi/settings.json` |
+| Portée  | Chemin                        |
+| ------- | ----------------------------- |
+| Globale | `~/.pi/agent/settings.json`   |
+| Projet  | `<project>/.pi/settings.json` |
 
 ```json
 {
-  "voice": {
-    "version": 2,
-    "enabled": true,
-    "language": "en",
-    "backend": "local",
-    "localModel": "parakeet-v3",
-    "scope": "global",
-    "onboarding": { "completed": true, "schemaVersion": 2 }
-  }
+	"voice": {
+		"version": 2,
+		"enabled": true,
+		"language": "en",
+		"backend": "local",
+		"localModel": "parakeet-v3",
+		"scope": "global",
+		"onboarding": { "completed": true, "schemaVersion": 2 }
+	}
 }
 ```
 
@@ -256,13 +257,13 @@ Les paramètres sont stockés dans les fichiers de configuration de Pi sous la c
 
 Exécutez `/voice test` dans Pi pour un diagnostic complet.
 
-| Problème | Solution |
-|----------|----------|
-| "DEEPGRAM_API_KEY not set" | [Obtenir une clé](https://dpgr.am/pi-voice) → `export DEEPGRAM_API_KEY="..."` dans `~/.zshrc` |
-| "No audio capture tool found" | `brew install sox` ou `brew install ffmpeg` |
-| La barre d'espace n'active pas la voix | Exécutez `/voice-settings` — la voix est peut-être désactivée |
-| Le modèle local ne transcrit pas | Vérifiez `/voice-settings` → onglet Appareil pour l'état de sherpa-onnx |
-| Échec du téléchargement | Les téléchargements partiels reprennent automatiquement. Vérifiez l'espace disque dans l'onglet Appareil. |
+| Problème                               | Solution                                                                                                  |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| "DEEPGRAM_API_KEY not set"             | [Obtenir une clé](https://dpgr.am/pi-voice) → `export DEEPGRAM_API_KEY="..."` dans `~/.zshrc`             |
+| "No audio capture tool found"          | `brew install sox` ou `brew install ffmpeg`                                                               |
+| La barre d'espace n'active pas la voix | Exécutez `/voice-settings` — la voix est peut-être désactivée                                             |
+| Le modèle local ne transcrit pas       | Vérifiez `/voice-settings` → onglet Appareil pour l'état de sherpa-onnx                                   |
+| Échec du téléchargement                | Les téléchargements partiels reprennent automatiquement. Vérifiez l'espace disque dans l'onglet Appareil. |
 
 ---
 

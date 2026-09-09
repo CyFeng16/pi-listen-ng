@@ -6,10 +6,10 @@
   <img src="assets/banner.png" alt="pi-listen — Saisie vocale pour l'agent de programmation Pi" width="100%" />
 </p>
 
-**Saisie vocale maintenir-pour-parler pour [Pi](https://github.com/mariozechner/pi-coding-agent).** Streaming cloud via Deepgram ou entièrement hors ligne avec des modèles locaux.
+**Saisie vocale maintenir-pour-parler pour [Pi](https://github.com/earendil-works/pi-coding-agent).** Streaming cloud via Deepgram ou entièrement hors ligne avec des modèles locaux.
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
 [![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v5.0.1 — Correctif de sécurité** — Les clés API ne fuient plus dans la configuration du projet. L'audio du micro ne peut plus être redirigé vers des serveurs distants via des paramètres de dépôt malveillants. Injection shell corrigée dans le processus d'intégration des clés API. Les écritures de configuration sont désormais atomiques. [Journal des modifications complet →](CHANGELOG.md)
@@ -28,7 +28,7 @@
 
 ```bash
 # Dans un terminal classique (pas à l'intérieur de Pi)
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. Choisir votre backend
@@ -285,7 +285,7 @@ Consultez [SECURITY.md](SECURITY.md) pour signaler des vulnérabilités.
 
 ## Liens
 
-- **npm :** [npmjs.com/package/@codexstar/pi-listen](https://www.npmjs.com/package/@codexstar/pi-listen)
-- **GitHub :** [github.com/codexstar69/pi-listen](https://github.com/codexstar69/pi-listen)
+- **npm :** [npmjs.com/package/pi-listen-ng](https://www.npmjs.com/package/pi-listen-ng)
+- **GitHub :** [github.com/CyFeng16/pi-listen-ng](https://github.com/CyFeng16/pi-listen-ng)
 - **Deepgram :** [dpgr.am/pi-voice](https://dpgr.am/pi-voice) (200 $ de crédit gratuit)
-- **Pi CLI :** [github.com/mariozechner/pi-coding-agent](https://github.com/mariozechner/pi-coding-agent)
+- **Pi CLI :** [github.com/earendil-works/pi-coding-agent](https://github.com/earendil-works/pi-coding-agent)

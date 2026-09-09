@@ -6,10 +6,10 @@
   <img src="assets/banner.png" alt="pi-listen — Pi 코딩 에이전트용 음성 입력" width="100%" />
 </p>
 
-**[Pi](https://github.com/mariozechner/pi-coding-agent)를 위한 길게 누르기 음성 입력.** Deepgram 클라우드 스트리밍 또는 로컬 모델로 완전 오프라인 지원.
+**[Pi](https://github.com/earendil-works/pi-coding-agent)를 위한 길게 누르기 음성 입력.** Deepgram 클라우드 스트리밍 또는 로컬 모델로 완전 오프라인 지원.
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
 [![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v5.0.1 — 보안 패치** — API 키가 프로젝트 설정에 노출되던 문제 수정. 악성 저장소 설정을 통한 마이크 오디오의 원격 서버 리디렉션 차단. API 키 온보딩 시 셸 인젝션 수정. 설정 쓰기가 원자적 작업으로 변경. [전체 변경 로그 →](CHANGELOG.md)
@@ -28,7 +28,7 @@
 
 ```bash
 # 일반 터미널에서 실행 (Pi 내부가 아닌)
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. 백엔드 선택
@@ -285,7 +285,7 @@ Pi 내부에서 `/voice test`를 실행하여 전체 진단을 수행하세요.
 
 ## 링크
 
-- **npm:** [npmjs.com/package/@codexstar/pi-listen](https://www.npmjs.com/package/@codexstar/pi-listen)
-- **GitHub:** [github.com/codexstar69/pi-listen](https://github.com/codexstar69/pi-listen)
+- **npm:** [npmjs.com/package/pi-listen-ng](https://www.npmjs.com/package/pi-listen-ng)
+- **GitHub:** [github.com/CyFeng16/pi-listen-ng](https://github.com/CyFeng16/pi-listen-ng)
 - **Deepgram:** [dpgr.am/pi-voice](https://dpgr.am/pi-voice) ($200 무료 크레딧)
-- **Pi CLI:** [github.com/mariozechner/pi-coding-agent](https://github.com/mariozechner/pi-coding-agent)
+- **Pi CLI:** [github.com/earendil-works/pi-coding-agent](https://github.com/earendil-works/pi-coding-agent)

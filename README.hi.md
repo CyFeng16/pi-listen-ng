@@ -6,10 +6,10 @@
   <img src="assets/banner.png" alt="pi-listen — Pi कोडिंग एजेंट के लिए वॉइस इनपुट" width="100%" />
 </p>
 
-**[Pi](https://github.com/mariozechner/pi-coding-agent) के लिए होल्ड-टू-टॉक वॉइस इनपुट।** Deepgram के ज़रिए क्लाउड स्ट्रीमिंग या लोकल मॉडल के साथ पूरी तरह ऑफ़लाइन।
+**[Pi](https://github.com/earendil-works/pi-coding-agent) के लिए होल्ड-टू-टॉक वॉइस इनपुट।** Deepgram के ज़रिए क्लाउड स्ट्रीमिंग या लोकल मॉडल के साथ पूरी तरह ऑफ़लाइन।
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
 [![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v5.0.1 — सुरक्षा पैच** — API कुंजियाँ अब प्रोजेक्ट कॉन्फ़िग में लीक नहीं होतीं। माइक ऑडियो को दुर्भावनापूर्ण रिपो सेटिंग्स के ज़रिए रिमोट सर्वर पर रीडायरेक्ट नहीं किया जा सकता। API कुंजी ऑनबोर्डिंग में शेल इंजेक्शन ठीक किया गया। कॉन्फ़िग राइट्स अब एटॉमिक हैं। [पूरा चेंजलॉग →](CHANGELOG.md)
@@ -28,7 +28,7 @@
 
 ```bash
 # सामान्य टर्मिनल में चलाएँ (Pi के अंदर नहीं)
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. अपना बैकएंड चुनें
@@ -285,7 +285,7 @@ extensions/voice/settings-panel.ts  सेटिंग्स पैनल — Co
 
 ## लिंक
 
-- **npm:** [npmjs.com/package/@codexstar/pi-listen](https://www.npmjs.com/package/@codexstar/pi-listen)
-- **GitHub:** [github.com/codexstar69/pi-listen](https://github.com/codexstar69/pi-listen)
+- **npm:** [npmjs.com/package/pi-listen-ng](https://www.npmjs.com/package/pi-listen-ng)
+- **GitHub:** [github.com/CyFeng16/pi-listen-ng](https://github.com/CyFeng16/pi-listen-ng)
 - **Deepgram:** [dpgr.am/pi-voice](https://dpgr.am/pi-voice) ($200 मुफ़्त क्रेडिट)
-- **Pi CLI:** [github.com/mariozechner/pi-coding-agent](https://github.com/mariozechner/pi-coding-agent)
+- **Pi CLI:** [github.com/earendil-works/pi-coding-agent](https://github.com/earendil-works/pi-coding-agent)

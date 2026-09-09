@@ -6,10 +6,10 @@
   <img src="assets/banner.png" alt="pi-listen — Pi 编程智能体的语音输入工具" width="100%" />
 </p>
 
-**为 [Pi](https://github.com/mariozechner/pi-coding-agent) 打造的按住即说语音输入。** 支持 Deepgram 云端流式传输或本地模型完全离线使用。
+**为 [Pi](https://github.com/earendil-works/pi-coding-agent) 打造的按住即说语音输入。** 支持 Deepgram 云端流式传输或本地模型完全离线使用。
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
 [![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v5.0.1 — 安全补丁** — API 密钥不再泄露到项目配置中。麦克风音频无法通过恶意仓库设置重定向到远程服务器。API 密钥引导流程中的 Shell 注入漏洞已修复。配置写入现在是原子操作。[完整更新日志 →](CHANGELOG.md)
@@ -28,7 +28,7 @@
 
 ```bash
 # 在普通终端中运行（不要在 Pi 内部运行）
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. 选择转录后端
@@ -285,7 +285,7 @@ extensions/voice/settings-panel.ts  设置面板 — Component 接口、覆盖�
 
 ## 链接
 
-- **npm:** [npmjs.com/package/@codexstar/pi-listen](https://www.npmjs.com/package/@codexstar/pi-listen)
-- **GitHub:** [github.com/codexstar69/pi-listen](https://github.com/codexstar69/pi-listen)
+- **npm:** [npmjs.com/package/pi-listen-ng](https://www.npmjs.com/package/pi-listen-ng)
+- **GitHub:** [github.com/CyFeng16/pi-listen-ng](https://github.com/CyFeng16/pi-listen-ng)
 - **Deepgram:** [dpgr.am/pi-voice](https://dpgr.am/pi-voice)（$200 免费额度）
-- **Pi CLI:** [github.com/mariozechner/pi-coding-agent](https://github.com/mariozechner/pi-coding-agent)
+- **Pi CLI:** [github.com/earendil-works/pi-coding-agent](https://github.com/earendil-works/pi-coding-agent)

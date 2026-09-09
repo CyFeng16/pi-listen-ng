@@ -6,10 +6,10 @@
   <img src="assets/banner.png" alt="pi-listen — Pi コーディングエージェント用の音声入力" width="100%" />
 </p>
 
-**[Pi](https://github.com/mariozechner/pi-coding-agent) 向けの長押しトーク音声入力。** Deepgram によるクラウドストリーミング、またはローカルモデルによる完全オフライン対応。
+**[Pi](https://github.com/earendil-works/pi-coding-agent) 向けの長押しトーク音声入力。** Deepgram によるクラウドストリーミング、またはローカルモデルによる完全オフライン対応。
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
 [![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v5.0.1 — セキュリティパッチ** — API キーがプロジェクト設定に漏洩する問題を修正。悪意のあるリポジトリ設定によるマイク音声のリモートサーバーへのリダイレクトを防止。API キーオンボーディング時のシェルインジェクションを修正。設定の書き込みがアトミック操作に。[完全な変更履歴 →](CHANGELOG.md)
@@ -28,7 +28,7 @@
 
 ```bash
 # 通常のターミナルで実行（Pi の内部ではなく）
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. バックエンドの選択
@@ -285,7 +285,7 @@ Pi 内で `/voice test` を実行して完全な診断を行います。
 
 ## リンク
 
-- **npm:** [npmjs.com/package/@codexstar/pi-listen](https://www.npmjs.com/package/@codexstar/pi-listen)
-- **GitHub:** [github.com/codexstar69/pi-listen](https://github.com/codexstar69/pi-listen)
+- **npm:** [npmjs.com/package/pi-listen-ng](https://www.npmjs.com/package/pi-listen-ng)
+- **GitHub:** [github.com/CyFeng16/pi-listen-ng](https://github.com/CyFeng16/pi-listen-ng)
 - **Deepgram:** [dpgr.am/pi-voice](https://dpgr.am/pi-voice)（$200 無料クレジット）
-- **Pi CLI:** [github.com/mariozechner/pi-coding-agent](https://github.com/mariozechner/pi-coding-agent)
+- **Pi CLI:** [github.com/earendil-works/pi-coding-agent](https://github.com/earendil-works/pi-coding-agent)

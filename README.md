@@ -1,16 +1,19 @@
 [English](README.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md) | [Français](README.fr.md) | [Português](README.pt-BR.md) | [हिन्दी](README.hi.md)
 
-# pi-listen
+# pi-listen-ng
+
+> **Community continuation of [`codexstar69/pi-listen`](https://github.com/codexstar69/pi-listen)** (archived upstream, MIT).
+> Not affiliated with the original author. Old name: `pi-listen`.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/banner.png" alt="pi-listen — Voice input for the Pi coding agent" width="100%" />
+  <img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/banner.png" alt="pi-listen — Voice input for the Pi coding agent" width="100%" />
 </p>
 
-**Hold-to-talk voice input for [Pi](https://github.com/mariozechner/pi-coding-agent).** Cloud streaming via Deepgram or fully offline with local models.
+**Hold-to-talk voice input for [Pi](https://github.com/earendil-works/pi-coding-agent).** Cloud streaming via Deepgram or fully offline with local models.
 
-[![npm version](https://img.shields.io/npm/v/@codexstar/pi-listen.svg)](https://www.npmjs.com/package/@codexstar/pi-listen)
-[![license](https://img.shields.io/npm/l/@codexstar/pi-listen.svg)](https://github.com/codexstar69/pi-listen/blob/main/LICENSE)
-[![author](https://img.shields.io/badge/author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
+[![npm version](https://img.shields.io/npm/v/pi-listen-ng.svg)](https://www.npmjs.com/package/pi-listen-ng)
+[![license](https://img.shields.io/npm/l/pi-listen-ng.svg)](https://github.com/CyFeng16/pi-listen-ng/blob/main/LICENSE)
+[![original author](https://img.shields.io/badge/original_author-@baanditeagle-1DA1F2?logo=x&logoColor=white)](https://x.com/baanditeagle)
 
 > **v7.0.0 — World-class TTS UX** — pick models from `/voice-settings` Speak
 > tab (no more JSON editing), auto-download on selection with progress, voice
@@ -27,8 +30,8 @@
 ## See How It Works
 
 <p align="center">
-  <a href="https://github.com/codexstar69/pi-listen/blob/main/assets/pi-listen.mp4">
-    <img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/banner.png" alt="Watch demo video" width="600" />
+  <a href="https://github.com/CyFeng16/pi-listen-ng/blob/main/assets/pi-listen.mp4">
+    <img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/banner.png" alt="Watch demo video" width="600" />
   </a>
   <br>
   <em>Click to watch the demo video</em>
@@ -42,7 +45,7 @@
 
 ```bash
 # In a regular terminal (not inside Pi)
-pi install npm:@codexstar/pi-listen
+pi install npm:pi-listen-ng
 ```
 
 ### 2. Choose your backend
@@ -99,25 +102,25 @@ All configuration lives in one place: `/voice-settings`. Four tabs cover everyth
 
 ### General — backend, language, scope
 
-<img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/settings-general.png" alt="General settings — backend, model, language, scope, voice toggle" width="600" />
+<img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/settings-general.png" alt="General settings — backend, model, language, scope, voice toggle" width="600" />
 
 Toggle between Deepgram (cloud, live streaming) and Local (offline, batch mode). Change language, scope, and enable/disable voice — all with keyboard shortcuts.
 
 ### Models — browse, search, install
 
-<img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/settings-models.png" alt="Models tab — browse 19 models with accuracy/speed ratings" width="600" />
+<img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/settings-models.png" alt="Models tab — browse 19 models with accuracy/speed ratings" width="600" />
 
 Browse 19 models from Parakeet, Whisper, Moonshine, SenseVoice, and GigaAM. Each model shows accuracy and speed ratings (●●●●○/●●●●○), fitness badges, and download status. Fuzzy search to find models fast. Press Enter to activate and download.
 
 ### Downloaded — manage installed models
 
-<img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/settings-downloaded.png" alt="Downloaded tab — manage installed models, activate or delete" width="600" />
+<img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/settings-downloaded.png" alt="Downloaded tab — manage installed models, activate or delete" width="600" />
 
 See what's installed, total disk usage, and which model is active. Press Enter to activate, `x` to delete. Models from [Handy](https://github.com/cjpais/handy) are auto-detected and can be imported without re-downloading.
 
 ### Device — hardware profile and dependencies
 
-<img src="https://raw.githubusercontent.com/codexstar69/pi-listen/main/assets/settings-device.png" alt="Device tab — hardware profile, dependencies, disk space" width="600" />
+<img src="https://raw.githubusercontent.com/CyFeng16/pi-listen-ng/main/assets/settings-device.png" alt="Device tab — hardware profile, dependencies, disk space" width="600" />
 
 See your hardware profile (RAM, CPU, GPU), dependency status (sherpa-onnx runtime), available disk space, and total downloaded models. Model recommendations are based on this profile.
 
@@ -326,12 +329,12 @@ See [SECURITY.md](SECURITY.md) for vulnerability reporting.
 
 ## License
 
-[MIT](LICENSE) © 2026 [@baanditeagle](https://x.com/baanditeagle)
+[MIT](LICENSE) — original by [@baanditeagle](https://x.com/baanditeagle), maintained by [CyFeng16](https://github.com/CyFeng16)
 
 ---
 
 <p align="center">
-  <strong>Made by <a href="https://x.com/baanditeagle">@baanditeagle</a></strong>
+  <strong>Continuation of pi-listen by <a href="https://x.com/baanditeagle">@baanditeagle</a>, maintained by <a href="https://github.com/CyFeng16">CyFeng16</a></strong>
   <br><br>
-  <a href="https://abhishektiwari.co">Website</a> · <a href="https://x.com/baanditeagle">𝕏 Twitter</a> · <a href="https://github.com/codexstar69/pi-listen">GitHub</a> · <a href="https://www.npmjs.com/package/@codexstar/pi-listen">npm</a> · <a href="https://github.com/codexstar69/pi-listen/issues">Report a Bug</a> · <a href="https://github.com/mariozechner/pi-coding-agent">Pi CLI</a>
+  <a href="https://abhishektiwari.co">Website</a> · <a href="https://x.com/baanditeagle">𝕏 Twitter</a> · <a href="https://github.com/CyFeng16/pi-listen-ng">GitHub</a> · <a href="https://www.npmjs.com/package/pi-listen-ng">npm</a> · <a href="https://github.com/CyFeng16/pi-listen-ng/issues">Report a Bug</a> · <a href="https://github.com/earendil-works/pi-coding-agent">Pi CLI</a>
 </p>
